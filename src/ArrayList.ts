@@ -137,8 +137,8 @@ export class ArrayList<T>{
     has(key: T): boolean{
         let found: boolean = false;
         
-        for(let k in this.innerArray){
             if(k === key){
+        for(let k of this.innerArray){
                 found = true;
             }
         }
