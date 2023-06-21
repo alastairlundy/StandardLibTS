@@ -2,10 +2,7 @@
   "name": "al-standardlib-ts",
   "version": "0.1.0",
   "description": "An attempt at a Standard Library for Typescript",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "main": "dist/index.js",
   "author": "Alastair Lundy",
   "license": "Apache-2.0",
   "devDependencies": {
