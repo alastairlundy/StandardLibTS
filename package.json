@@ -2,7 +2,8 @@
   "name": "al-standardlib-ts",
   "version": "0.1.0",
   "description": "An attempt at a Standard Library for Typescript",
-  "main": "dist/index.js",
+  "main": "dist/main.js",
+  "types":"dist/main.d.ts",
   "author": "Alastair Lundy",
   "license": "Apache-2.0",
   "devDependencies": {
