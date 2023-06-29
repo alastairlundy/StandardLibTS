@@ -1,2 +1,2 @@
-# StandardLibTS
-An attempt at a standard library for Typescript
+# stdlibts
+Typescript code that I need for other projects that might be useful to people.
