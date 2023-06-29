@@ -1,12 +1,12 @@
 {
-  "name": "al-standardlib-ts",
+  "name": "@alastairlundy/stdlib",
   "version": "0.1.0",
-  "description": "An attempt at a Standard Library for Typescript",
+  "description": "Typescript code I need for other projects that might be useful to some people.",
   "main": "dist/main.js",
-  "types":"dist/main.d.ts",
+  "typings": "dist/main.d.ts",
   "author": "Alastair Lundy",
-  "license": "Apache-2.0",
+  "license": "LGPL-3.0-or-later",
   "devDependencies": {
+    "rollup-plugin-dts": "^5.3.0",
     "typescript": "^5.1.3"
   }
-}
