@@ -7,6 +7,6 @@
   "author": "Alastair Lundy",
   "license": "LGPL-3.0-or-later",
   "devDependencies": {
-    "rollup-plugin-dts": "^5.3.0",
     "typescript": "^5.1.3"
   }
+}

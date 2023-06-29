@@ -1,0 +1,1 @@
+tsc --target esnext --outfile dist/main.js --module system
