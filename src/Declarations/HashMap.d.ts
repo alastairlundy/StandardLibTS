@@ -9,7 +9,7 @@ declare class HashMap<K, V>{
     put(key: K, value: V): void;
     putIfAbsent(key: K, value:V): void;
 
-    get(key: K);
+    get(key: K): any;
     getOrDefault(key: K, defaultValue: V) : V;
 
     indexOf(key: K): number;
