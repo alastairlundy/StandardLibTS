@@ -1,5 +1,3 @@
-import { Version } from "../Types/Version";
-
 export = Version;
 
 declare class Version{

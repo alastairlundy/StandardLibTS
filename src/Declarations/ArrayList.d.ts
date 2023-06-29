@@ -1,5 +1,3 @@
-import { ArrayList } from "../ArrayList";
-
 export = ArrayList;
 
 declare class ArrayList<T>{

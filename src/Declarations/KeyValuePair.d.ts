@@ -1,5 +1,3 @@
-import { KeyValuePair } from "../Types/KeyValuePair";
-
 export = KeyValuePair;
 
 declare class KeyValuePair<K, V>{

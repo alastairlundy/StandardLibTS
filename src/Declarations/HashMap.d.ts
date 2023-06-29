@@ -1,4 +1,4 @@
-import { HashMap } from "../Types/HashMap";
+import { KeyValuePair } from "../KeyValuePair"
 
 export = HashMap
 
