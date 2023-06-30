@@ -1,12 +1,23 @@
 {
-  "name": "@alastairlundy/stdlib",
+  "name": "@alastairlundy/stdlibts",
   "version": "0.1.0",
   "description": "Typescript code I need for other projects that might be useful to some people.",
   "main": "dist/main.js",
   "typings": "dist/main.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alastairlundy/stdlibts.git"
+  },
   "author": "Alastair Lundy",
   "license": "LGPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/alastairlundy/stdlibts/issues"
+  },
+  "homepage": "https://github.com/alastairlundy/stdlibts#readme",
   "devDependencies": {
-    "typescript": "^5.1.3"
+    "typescript":"^5.1.5"
   }
 }
