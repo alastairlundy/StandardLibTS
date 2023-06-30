@@ -1,10 +1,11 @@
-import { ArrayList } from "./ArrayList";
-import { KeyValuePair } from "./KeyValuePair";
+import { ArrayList } from "ArrayList"
 
-/**
+import { KeyValuePair } from "KeyValuePair";
+
+    /**
  * A class that mimics C# Dictionaries and Java HashMaps. 
  */
-export class HashMap<K, V>{
+ export class HashMap<K, V>{
     internalList : ArrayList<KeyValuePair<K, V>>;
 
     constructor(){
