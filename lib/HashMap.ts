@@ -1,6 +1,6 @@
-import { ArrayList } from "ArrayList"
+import { ArrayList } from "./ArrayList"
 
-import { KeyValuePair } from "KeyValuePair";
+import { KeyValuePair } from "./KeyValuePair";
 
     /**
  * A class that mimics C# Dictionaries and Java HashMaps. 
@@ -17,8 +17,8 @@ import { KeyValuePair } from "KeyValuePair";
      * @param key 
      * @param value 
      */
-    put(key: K, value: V): void{
-        this.internalList.add(new KeyValuePair(key, value));
+    Put(key: K, value: V): void{
+        this.internalList.Add(new KeyValuePair(key, value));
     }
 
     /**
@@ -27,14 +27,14 @@ import { KeyValuePair } from "KeyValuePair";
      * @param value 
      * @returns 
      */
-    putIfAbsent(key: K, value:V): void{
-        for(let i of this.internalList.toArray()){
+    PutIfAbsent(key: K, value:V): void{
+        for(let i of this.internalList.ToArray()){
             if(i.key === key){
                 i.value = value;
                 return;
             }
         }
-        this.put(key, value);
+        this.Put(key, value);
     }
 
     /**
@@ -42,8 +42,8 @@ import { KeyValuePair } from "KeyValuePair";
      * @param key 
      * @returns 
      */
-    get(key: K){
-        for(let i of this.internalList.toArray()){
+    Get(key: K){
+        for(let i of this.internalList.ToArray()){
             if(i.key === key){
                return i.value;
             }
@@ -58,7 +58,7 @@ import { KeyValuePair } from "KeyValuePair";
      * @param defaultValue 
      * @returns 
      */
-    getOrDefault(key: K, defaultValue: V) : V{
+    GetOrDefault(key: K, defaultValue: V) : V{
         for(let i of this.internalList){
             if(i.key === key){
                 return i.value;
@@ -73,9 +73,9 @@ import { KeyValuePair } from "KeyValuePair";
      * @param key 
      * @returns Returns -1 if an error has occured or the correct index if correctly detected.
      */
-    indexOf(key: K): number{
-        for(let i = 0; i < this.internalList.size(); i++){
-            if(key === this.internalList.get(i).key){
+    IndexOf(key: K): number{
+        for(let i = 0; i < this.internalList.Size(); i++){
+            if(key === this.internalList.Get(i).key){
                 return i;
             }
         }
@@ -87,51 +87,51 @@ import { KeyValuePair } from "KeyValuePair";
      * @param value 
      * @returns 
      */
-    getKeysOf(value: V): Array<K>{
+    GetKeysOf(value: V): Array<K>{
         let keys: ArrayList<K> = new ArrayList<K>();
         
         for(let pair of this.internalList){
             if(pair.value === value){
-                keys.add(pair.key);
+                keys.Add(pair.key);
             }
         }
 
-        return keys.toArray();
+        return keys.ToArray();
     }
 
     /**
      * 
      * @returns 
      */
-    keys() : Array<K>{
+    Keys() : Array<K>{
         let keys: ArrayList<K> = new ArrayList<K>();
         
         for(let pair of this.internalList){
-                keys.add(pair.key);
+                keys.Add(pair.key);
         }
 
-        return keys.toArray();
+        return keys.ToArray();
     }
 
     /**
      * 
      * @returns 
      */
-    values(): Array<V>{
+    Values(): Array<V>{
         let values: ArrayList<V> = new ArrayList<V>();
         
         for(let pair of this.internalList){
-                values.add(pair.value);
+                values.Add(pair.value);
         }
 
-        return values.toArray();
+        return values.ToArray();
     }
 
     /**
      * 
      * @returns 
      */
-    toArray() : Array<KeyValuePair<K, V>>{
-        return this.internalList.toArray();
+    ToArray() : Array<KeyValuePair<K, V>>{
+        return this.internalList.ToArray();
     }
 }

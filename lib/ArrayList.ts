@@ -22,8 +22,8 @@ export class ArrayList<T>{
          * @param newPosition
          * @param item 
          */
-        move(newPosition: number, item: T): void{
-            let oldPosition = this.indexOf(item);
+        Move(newPosition: number, item: T): void{
+            let oldPosition = this.IndexOf(item);
     
             let existingObject = this.innerArray[newPosition];
             this.innerArray[newPosition] = item;
@@ -36,17 +36,17 @@ export class ArrayList<T>{
          * @param position 
          * @param item 
          */
-        insertAt(position: number, item: T): void{
+        InsertAt(position: number, item: T): void{
             
-            this.add(item);
-            this.move(position, item);
+            this.Add(item);
+            this.Move(position, item);
         }
     
         /**
          * 
          * @param item 
          */
-        add(item: T) : void{
+        Add(item: T) : void{
             let newArray: Array<T> = new Array<T>(this.innerArray.length + 1);
             newArray.push(item);
     
@@ -57,7 +57,7 @@ export class ArrayList<T>{
          * 
          * @param item 
          */
-        remove(item: T): void{
+        Remove(item: T): void{
             let newArray = new Array<T>(this.innerArray.length - 1);
     
             for(let i of this.innerArray){
@@ -76,8 +76,8 @@ export class ArrayList<T>{
          * Removes the item at the specified index.
          * @param index: The index to retrieve the item to be removed.
          */
-        removeAt(index: number): void{
-            this.remove(this.get(index));
+        RemoveAt(index: number): void{
+            this.Remove(this.Get(index));
         }
     
         /**
@@ -85,7 +85,7 @@ export class ArrayList<T>{
          * @param index 
          * @returns 
          */
-        get(index: number): T{
+        Get(index: number): T{
            return this.innerArray[index];
         }
     
@@ -93,7 +93,7 @@ export class ArrayList<T>{
          * 
          * @returns 
          */
-        toArray(): Array<T>{
+        ToArray(): Array<T>{
             return this.innerArray;
         }
     
@@ -101,7 +101,7 @@ export class ArrayList<T>{
          * 
          * @returns 
          */
-        size() : number{
+        Size() : number{
             return this.innerArray.length;
         }
     
@@ -110,7 +110,7 @@ export class ArrayList<T>{
          * @param item 
          * @returns 
          */
-        indexOf(item: T): number{
+        IndexOf(item: T): number{
             let index = -1;
             
             for(let i = 0; i < this.innerArray.length; i++){
@@ -124,9 +124,9 @@ export class ArrayList<T>{
         /**
          * Removes all elements in the ArrayList.
          */
-        clear(): void{
+        Clear(): void{
             for(let i = 0; i < this.innerArray.length; i++){
-                this.removeAt(i);
+                this.RemoveAt(i);
             }
         }
     
@@ -135,7 +135,7 @@ export class ArrayList<T>{
          * @param key 
          * @returns 
          */
-        has(key: T): boolean{
+        Has(key: T): boolean{
             let found: boolean = false;
             
             for(let k of this.innerArray){

@@ -11,14 +11,14 @@ export class Version {
         this.revisionVersion = revisionVersion;
     }
 
-    public equals(version: Version): boolean{
+    public Equals(version: Version): boolean{
         return ((this.majorVersion === version.majorVersion)
          && (this.minorVersion === version.minorVersion)
           && (this.buildVersion === version.buildVersion)
            && (this.revisionVersion === version.revisionVersion));
     }
 
-    public isNewerThan(version: Version): boolean{
+    public IsNewerThan(version: Version): boolean{
         if(this.majorVersion > version.majorVersion){
             return true;
         }
@@ -51,35 +51,33 @@ export class Version {
         }
     }
 
-    public toString() : string{
+    public ToString() : string{
         return this.majorVersion.toString() + "." + this.minorVersion.toString() + "." + this.buildVersion.toString() + "." + this.revisionVersion.toString();
     }
 
-    public getMajorVersion(): number{
+    public GetMajorVersion(): number{
         return this.majorVersion;
     }
-    public getMinorVersion(): number{
+    public GetMinorVersion(): number{
         return this.minorVersion;
     }
-    public getBuildVersion(): number{
+    public GetBuildVersion(): number{
         return this.buildVersion;
     }
-    public getRevisionVersion(): number{
+    public GetRevisionVersion(): number{
         return this.revisionVersion;
     }
 
-    public setMajorVersion(majorVersion: number): void{
+    public SetMajorVersion(majorVersion: number): void{
         this.majorVersion = majorVersion;
     }
-    public setMinorVersion(minorVersion: number): void{
+    public SetMinorVersion(minorVersion: number): void{
         this.minorVersion = minorVersion;
     }
-    public setBuildVersion(buildVersion: number): void{
+    public SetBuildVersion(buildVersion: number): void{
         this.buildVersion = buildVersion;
     }
-    public setRevisionVersion(revisionVersion: number): void{
+    public SetRevisionVersion(revisionVersion: number): void{
         this.revisionVersion = revisionVersion;
     }
-
-
 }
