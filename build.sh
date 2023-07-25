@@ -1,13 +1,13 @@
 ##rm -f dist/main.d.ts
 
-mkdir dist/ts
+mkdir src/dist/ts
 
-mkdir dist/js
+mkdir src/dist/js
 
-cp -a lib/. dist/ts 
+cp -a src/lib/. src/dist/ts 
 
-tsc  --target esnext --outfile dist/main.js --module system
+tsc  --target esnext --outfile src/dist/main.js --module system
 
-mv dist/main.js dist/js/main.js
+mv src/dist/main.js src/dist/js/main.js
 
-mv dist/main.d.ts dist/js/main.d.ts
+mv src/dist/main.d.ts src/dist/js/main.d.ts
