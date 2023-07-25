@@ -6,15 +6,15 @@ declare class HashMap<K, V>{
 
     constructor();
 
-    put(key: K, value: V): void;
-    putIfAbsent(key: K, value:V): void;
+    Put(key: K, value: V): void;
+    PutIfAbsent(key: K, value:V): void;
 
-    get(key: K): any;
-    getOrDefault(key: K, defaultValue: V) : V;
+    Get(key: K): any;
+    GetOrDefault(key: K, defaultValue: V) : V;
 
-    indexOf(key: K): number;
-    getKeysOf(value: V): Array<K>;
-    keys() : Array<K>;
-    values(): Array<V>;
-    toArray() : Array<KeyValuePair<K, V>>;
+    IndexOf(key: K): number;
+    GetKeysOf(value: V): Array<K>;
+    Keys() : Array<K>;
+    Values(): Array<V>;
+    ToArray() : Array<KeyValuePair<K, V>>;
 }

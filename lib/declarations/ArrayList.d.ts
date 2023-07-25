@@ -4,20 +4,20 @@ declare class ArrayList<T>{
 
     constructor();
 
-    move(newPosition: number, item: T): void;
-    insertAt(position: number, item: T): void;
-    add(item: T) : void;
-    remove(item: T) : void;
+    Move(newPosition: number, item: T): void;
+    InsertAt(position: number, item: T): void;
+    Add(item: T) : void;
+    Remove(item: T) : void;
 
-    removeAt(index: number): void;
+    RemoveAt(index: number): void;
 
-    get(index: number): T;
-    toArray(): Array<T>;
+    Get(index: number): T;
+    ToArray(): Array<T>;
 
-    size() : number;
-    indexOf(item: T): number;
+    Size() : number;
+    IndexOf(item: T): number;
 
-    clear(): void;
-    has(key: T): boolean;
+    Clear(): void;
+    Has(key: T): boolean;
 
 }
