@@ -132,14 +132,14 @@ export class ArrayList<T>{
     
         /**
          * 
-         * @param key 
+         * @param item
          * @returns 
          */
         public has(key: T): boolean{
             let found: boolean = false;
             
             for(let k of this.innerArray){
-                if(k === key){
+                if(k === item){
                 found = true;
                 }
             }
