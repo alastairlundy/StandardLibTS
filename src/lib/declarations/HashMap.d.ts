@@ -6,15 +6,23 @@ declare class HashMap<K, V>{
 
     constructor();
 
-    Put(key: K, value: V): void;
-    PutIfAbsent(key: K, value:V): void;
+    public put(key: K, value: V): void;
+    public putPair(keyValuePair: KeyValuePair<K, V>): void;
 
-    Get(key: K): any;
-    GetOrDefault(key: K, defaultValue: V) : V;
+    public putIfAbsent(key: K, value:V): void;
+    public putPairIfAbsent(keyValuePair: KeyValuePair<K, V>): void;
 
-    IndexOf(key: K): number;
-    GetKeysOf(value: V): Array<K>;
-    Keys() : Array<K>;
-    Values(): Array<V>;
-    ToArray() : Array<KeyValuePair<K, V>>;
+    public get(key: K): any;
+    public getOrDefault(key: K, defaultValue: V) : V;
+
+    public indexOf(key: K): number;
+    public getKeysOf(value: V): Array<K>;
+    public keys() : Array<K>;
+    public values(): Array<V>;
+    public toArray() : Array<KeyValuePair<K, V>>;
+
+    public contains(key: K): boolean;
+    public containsPair(keyValuePair: KeyValuePair<K, V>): boolean;
+
+    public equals(hashMap: HashMap<K, V>): boolean;
 }

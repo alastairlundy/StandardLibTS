@@ -4,17 +4,18 @@ declare class Version{
 
     constructor(majorVersion: number, minorVersion: number, buildVersion: number, revisionVersion: number);
 
-    Equals(): boolean;
-    IsNewerThan(version: Version): boolean;
-    ToString(): string;
+    public equals(): boolean;
 
-    GetMajorVersion(): number;
-    GetMinorVersion(): number;
-    GetBuildVersion(): number;
-    GetRevisionVersion(): number;
+    public isNewerThan(version: Version): boolean;
+    public toString(): string;
 
-    SetMajorVersion(majorVersion: number): void;
-    SetMinorVersion(minorVersion: number): void;
-    SetBuildVersion(buildVersion: number): void;
-    SetRevisionVersion(revisionVersion: number): void;
+    public getMajorVersion(): number;
+    public getMinorVersion(): number;
+    public getBuildVersion(): number;
+    public getRevisionVersion(): number;
+
+    public setMajorVersion(majorVersion: number): void;
+    public setMinorVersion(minorVersion: number): void;
+    public setBuildVersion(buildVersion: number): void;
+    public setRevisionVersion(revisionVersion: number): void;
 }

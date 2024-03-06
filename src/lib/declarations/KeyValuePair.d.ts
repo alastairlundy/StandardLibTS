@@ -2,8 +2,10 @@ export = KeyValuePair;
 
 declare class KeyValuePair<K, V>{
 
-    key: K;
-    value: V;
+    public key: K;
+    public value: V;
 
     constructor(key: K, value: V);
+
+    public equals(keyValuePair: KeyValuePair<K, V>): boolean;
 }
