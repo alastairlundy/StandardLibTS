@@ -7,6 +7,13 @@ export class Version {
     protected buildVersion: number;
     protected revisionVersion: number;
 
+    /**
+     *
+     * @param majorVersion
+     * @param minorVersion
+     * @param buildVersion
+     * @param revisionVersion
+     */
     constructor(majorVersion: number, minorVersion: number, buildVersion: number, revisionVersion: number){
         this.majorVersion = majorVersion;
         this.minorVersion = minorVersion;
@@ -14,6 +21,10 @@ export class Version {
         this.revisionVersion = revisionVersion;
     }
 
+    /**
+     *
+     * @param version
+     */
     public equals(version: Version): boolean{
         return ((this.majorVersion === version.majorVersion)
          && (this.minorVersion === version.minorVersion)
@@ -21,6 +32,10 @@ export class Version {
            && (this.revisionVersion === version.revisionVersion));
     }
 
+    /**
+     *
+     * @param version
+     */
     public isNewerThan(version: Version): boolean{
         if(this.majorVersion > version.majorVersion){
             return true;
@@ -54,32 +69,69 @@ export class Version {
         }
     }
 
+    /**
+     *
+     */
     public toString() : string{
         return this.majorVersion.toString() + "." + this.minorVersion.toString() + "." + this.buildVersion.toString() + "." + this.revisionVersion.toString();
     }
 
+    /**
+     *
+     */
     public getMajorVersion(): number{
         return this.majorVersion;
     }
+
+    /**
+     *
+     */
     public getMinorVersion(): number{
         return this.minorVersion;
     }
+
+    /**
+     *
+     */
     public getBuildVersion(): number{
         return this.buildVersion;
     }
+
+    /**
+     *
+     */
     public getRevisionVersion(): number{
         return this.revisionVersion;
     }
 
+    /**
+     *
+     * @param majorVersion
+     */
     public setMajorVersion(majorVersion: number): void{
         this.majorVersion = majorVersion;
     }
+
+    /**
+     *
+     * @param minorVersion
+     */
     public setMinorVersion(minorVersion: number): void{
         this.minorVersion = minorVersion;
     }
+
+    /**
+     *
+     * @param buildVersion
+     */
     public setBuildVersion(buildVersion: number): void{
         this.buildVersion = buildVersion;
     }
+
+    /**
+     *
+     * @param revisionVersion
+     */
     public setRevisionVersion(revisionVersion: number): void{
         this.revisionVersion = revisionVersion;
     }
