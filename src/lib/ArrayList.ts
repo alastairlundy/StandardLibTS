@@ -104,7 +104,25 @@ export class ArrayList<T>{
         public size() : number{
             return this.innerArray.length;
         }
-    
+
+    /**
+     *
+     */
+    protected capacity(): number{
+            let count: number = 0;
+
+            for(let i of this.innerArray){
+                if(i === undefined){
+
+                }
+                else{
+                    count++;
+                }
+            }
+
+            return count;
+        }
+
         /**
          * Gets the index of an item within the List.
          * @param item 
