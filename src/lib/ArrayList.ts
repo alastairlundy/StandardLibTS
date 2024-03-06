@@ -145,4 +145,20 @@ export class ArrayList<T>{
             }
             return found;
         }
+
+    /**
+     *
+     * @param arrayList
+     */
+    public equals(arrayList: ArrayList<T>) : boolean{
+            let equality: boolean = true;
+
+            for(let i of arrayList.toArray()){
+                if(!this.contains(i)){
+                    equality = false;
+                }
+            }
+
+            return equality;
+        }
     }
