@@ -1,9 +1,18 @@
 export class MathHelper{
 
+    /**
+     *
+     * @param value
+     * @param power
+     */
     public root(value: number, power: number): number{
         return Math.pow(value, (1.0 / power));
     }
 
+    /**
+     *
+     * @param numbers
+     */
     public calculateGeometricMean(numbers: number[]): number{
         let sum: number = 0;
 
@@ -14,6 +23,10 @@ export class MathHelper{
         return this.root(sum, numbers.length);
     }
 
+    /**
+     *
+     * @param numbers
+     */
     public calculateArithmeticMean(numbers: number[]): number{
         let sum: number = 0;
 
