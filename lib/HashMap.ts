@@ -17,7 +17,7 @@ import { KeyValuePair } from "./KeyValuePair";
     }
 
     /**
-     * Adds a Key and it's associated Value to the HashMap
+     * Adds a Key with it's associated Value to the HashMap
      * @param key 
      * @param value 
      */
@@ -49,6 +49,10 @@ import { KeyValuePair } from "./KeyValuePair";
         this.put(key, value);
     }
 
+    /**
+     * If the KeyValuePair is not found within the hashmap, the KeyValuePair is added to it.
+     * @param keyValuePair
+     */
     public putPairIfAbsent(keyValuePair: KeyValuePair<K, V>) : void{
         for(let i of this.internalList){
             if(i.equals(keyValuePair)){
@@ -91,7 +95,7 @@ import { KeyValuePair } from "./KeyValuePair";
     }
 
     /**
-     * 
+     * Returns the Index of a Key within a HashMap.
      * @param key 
      * @returns Returns -1 if an error has occurred or the correct index if correctly detected.
      */
@@ -105,7 +109,7 @@ import { KeyValuePair } from "./KeyValuePair";
     }
 
     /**
-     * 
+     * Get Keys associated with a Value.
      * @param value 
      * @returns 
      */
@@ -122,7 +126,7 @@ import { KeyValuePair } from "./KeyValuePair";
     }
 
     /**
-     * 
+     * Returns all keys in the HashMap.
      * @returns 
      */
     public keys() : Array<K>{
@@ -136,7 +140,7 @@ import { KeyValuePair } from "./KeyValuePair";
     }
 
     /**
-     * 
+     * Returns all values in the HashMap.
      * @returns 
      */
     public values(): Array<V>{
@@ -150,7 +154,7 @@ import { KeyValuePair } from "./KeyValuePair";
     }
 
     /**
-     *
+     * Returns whether the HashMap contains a specified Key.
      * @param key
      */
     public contains(key: K): boolean{
@@ -165,7 +169,7 @@ import { KeyValuePair } from "./KeyValuePair";
     }
 
     /**
-     *
+     * Returns whether the HashMap contains a specified KeyValuePair.
      * @param keyValuePair
      */
     public containsPair(keyValuePair: KeyValuePair<K, V>): boolean{
@@ -180,7 +184,7 @@ import { KeyValuePair } from "./KeyValuePair";
     }
 
     /**
-     * 
+     * Returns the HashMap as an Array of KeyValuePairs.
      * @returns 
      */
     public toArray() : Array<KeyValuePair<K, V>>{
@@ -188,7 +192,7 @@ import { KeyValuePair } from "./KeyValuePair";
     }
 
     /**
-     *
+     * Returns whether a specified HashMap is equal to this HashMap.
      * @param hashMap
      */
     public equals(hashMap: HashMap<K, V>): boolean{

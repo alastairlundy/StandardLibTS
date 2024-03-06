@@ -70,7 +70,7 @@ export class Version {
     }
 
     /**
-     *
+     * Return the version in a string format of Major.Minor.Build.Revision
      */
     public toString() : string{
         return this.majorVersion.toString() + "." + this.minorVersion.toString() + "." + this.buildVersion.toString() + "." + this.revisionVersion.toString();
