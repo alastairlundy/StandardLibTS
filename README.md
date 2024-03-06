@@ -1,2 +1,2 @@
 # stdlibts
-Typescript code that I need for other projects that might be useful to people.
+Typescript code that I need for other projects that might be useful to others.
