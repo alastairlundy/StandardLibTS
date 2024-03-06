@@ -2,7 +2,7 @@ import { ArrayList } from "./ArrayList"
 
 import { KeyValuePair } from "./KeyValuePair";
 
-    /**
+/**
  * A class that mimics C# Dictionaries and Java HashMaps. 
  */
  export class HashMap<K, V>{
@@ -22,7 +22,15 @@ import { KeyValuePair } from "./KeyValuePair";
     }
 
     /**
-     * 
+     * Add a KeyValuePair to the HashMap.
+     * @param keyValuePair
+     */
+    public putPair(keyValuePair: KeyValuePair<K, V>): void{
+        this.internalList.add(keyValuePair);
+    }
+
+    /**
+     * If the key specified is not found within the hashmap, the key and value are added to it.
      * @param key 
      * @param value 
      * @returns 
@@ -37,10 +45,20 @@ import { KeyValuePair } from "./KeyValuePair";
         this.put(key, value);
     }
 
+    public putPairIfAbsent(keyValuePair: KeyValuePair<K, V>) : void{
+        for(let i of this.internalList.toArray()){
+            if(i.equals(keyValuePair)){
+                return;
+            }
+        }
+        this.putPair(keyValuePair);
+    }
+
     /**
-     * 
+     * Returns the Value associated with the Key.
+     * If no Value is associated with the Key undefined is returned instead.
      * @param key 
-     * @returns 
+     * @returns
      */
     public get(key: K){
         for(let i of this.internalList.toArray()){
