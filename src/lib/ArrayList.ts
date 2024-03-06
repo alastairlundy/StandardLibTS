@@ -18,7 +18,7 @@ export class ArrayList<T>{
         }
     
         /**
-         * 
+         * Moves an item in the arraylist to a new position.
          * @param newPosition
          * @param item 
          */
@@ -49,7 +49,7 @@ export class ArrayList<T>{
         public add(item: T) : void{
             let newArray: Array<T> = new Array<T>(this.innerArray.length + 1);
             newArray.push(item);
-    
+
             this.innerArray = newArray;
         }
     
