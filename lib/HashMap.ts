@@ -12,6 +12,10 @@ import { KeyValuePair } from "./KeyValuePair";
         this.internalList = new ArrayList<KeyValuePair<K, V>>();
     }
 
+    public [Symbol.iterator](){
+        return this.internalList;
+    }
+
     /**
      * Adds a Key and it's associated Value to the HashMap
      * @param key 
@@ -36,7 +40,7 @@ import { KeyValuePair } from "./KeyValuePair";
      * @returns 
      */
     public putIfAbsent(key: K, value:V): void{
-        for(let i of this.internalList.toArray()){
+        for(let i of this.internalList){
             if(i.key === key){
                 i.value = value;
                 return;
@@ -46,7 +50,7 @@ import { KeyValuePair } from "./KeyValuePair";
     }
 
     public putPairIfAbsent(keyValuePair: KeyValuePair<K, V>) : void{
-        for(let i of this.internalList.toArray()){
+        for(let i of this.internalList){
             if(i.equals(keyValuePair)){
                 return;
             }
@@ -61,7 +65,7 @@ import { KeyValuePair } from "./KeyValuePair";
      * @returns
      */
     public get(key: K){
-        for(let i of this.internalList.toArray()){
+        for(let i of this.internalList){
             if(i.key === key){
                return i.value;
             }
@@ -152,7 +156,7 @@ import { KeyValuePair } from "./KeyValuePair";
     public contains(key: K): boolean{
         let found: boolean = false;
 
-        for(let k of this.toArray()){
+        for(let k of this.internalList){
             if(k === key){
                 found = true;
             }
@@ -167,7 +171,7 @@ import { KeyValuePair } from "./KeyValuePair";
     public containsPair(keyValuePair: KeyValuePair<K, V>): boolean{
         let found: boolean = false;
 
-        for(let k of this.toArray()){
+        for(let k of this.internalList){
             if(k.equals(keyValuePair)){
                 found = true;
             }
@@ -190,7 +194,7 @@ import { KeyValuePair } from "./KeyValuePair";
     public equals(hashMap: HashMap<K, V>): boolean{
         let equality: boolean = true;
 
-        for(let i of hashMap.toArray()){
+        for(let i of hashMap){
             if(!this.containsPair(i)){
                 equality = false;
             }

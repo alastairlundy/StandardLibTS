@@ -12,11 +12,11 @@ export class ArrayList<T>{
             //Initialize the array to the default size
             this.innerArray = new Array<T>(this.defaultSize);
         }
-    
-        protected [Symbol.iterator](){
-            return this.innerArray.values.arguments;
+
+        public [Symbol.iterator](){
+            return this.innerArray.values();
         }
-    
+
         /**
          * Moves an item in the arraylist to a new position.
          * @param newPosition
@@ -171,7 +171,7 @@ export class ArrayList<T>{
     public equals(arrayList: ArrayList<T>) : boolean{
             let equality: boolean = true;
 
-            for(let i of arrayList.toArray()){
+            for(let i: T of arrayList){
                 if(!this.contains(i)){
                     equality = false;
                 }
