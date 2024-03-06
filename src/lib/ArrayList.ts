@@ -135,7 +135,7 @@ export class ArrayList<T>{
          * @param item
          * @returns 
          */
-        public has(key: T): boolean{
+        public contains(item: T): boolean{
             let found: boolean = false;
             
             for(let k of this.innerArray){
