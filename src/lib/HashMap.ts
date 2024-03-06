@@ -13,7 +13,7 @@ import { KeyValuePair } from "./KeyValuePair";
     }
 
     /**
-     * Adds items to the HashMap
+     * Adds a Key and it's associated Value to the HashMap
      * @param key 
      * @param value 
      */
