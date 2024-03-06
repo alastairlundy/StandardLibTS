@@ -71,7 +71,7 @@ import { KeyValuePair } from "./KeyValuePair";
     /**
      * 
      * @param key 
-     * @returns Returns -1 if an error has occured or the correct index if correctly detected.
+     * @returns Returns -1 if an error has occurred or the correct index if correctly detected.
      */
     public indexOf(key: K): number{
         for(let i = 0; i < this.internalList.size(); i++){
