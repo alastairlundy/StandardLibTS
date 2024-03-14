@@ -1,7 +1,6 @@
 
 /**
- * 
- * 
+ * Arrays but re-sizeable and supercharged to be similar to Java ArrayLists.
  */
 export class ArrayList<T>{
         protected defaultSize: number = 0;

@@ -1,5 +1,5 @@
 /*
-    A class to represent versions of Software.
+    A class to represent versions of Software or other things.
  */
 export class Version {
     protected majorVersion: number;
@@ -22,7 +22,7 @@ export class Version {
     }
 
     /**
-     *
+     * Returns whether another Version object is equal to this version object.
      * @param version
      */
     public equals(version: Version): boolean{
@@ -33,7 +33,7 @@ export class Version {
     }
 
     /**
-     *
+     * Returns whether another Version object is a newer version than this version object.
      * @param version
      */
     public isNewerThan(version: Version): boolean{
@@ -70,42 +70,42 @@ export class Version {
     }
 
     /**
-     * Return the version in a string format of Major.Minor.Build.Revision
+     * Returns the version in a string format of Major.Minor.Build.Revision
      */
     public toString() : string{
         return this.majorVersion.toString() + "." + this.minorVersion.toString() + "." + this.buildVersion.toString() + "." + this.revisionVersion.toString();
     }
 
     /**
-     *
+     * Returns the major version of this version object.
      */
     public getMajorVersion(): number{
         return this.majorVersion;
     }
 
     /**
-     *
+     * Returns the minor version of this version object.
      */
     public getMinorVersion(): number{
         return this.minorVersion;
     }
 
     /**
-     *
+     * Returns the build version of this version object.
      */
     public getBuildVersion(): number{
         return this.buildVersion;
     }
 
     /**
-     *
+     * Returns the revision version of this version object.
      */
     public getRevisionVersion(): number{
         return this.revisionVersion;
     }
 
     /**
-     *
+     * Sets the major version of this version object to a specified number.
      * @param majorVersion
      */
     public setMajorVersion(majorVersion: number): void{
@@ -113,7 +113,7 @@ export class Version {
     }
 
     /**
-     *
+     * Sets the minor version of this version object to a specified number.
      * @param minorVersion
      */
     public setMinorVersion(minorVersion: number): void{
@@ -121,7 +121,7 @@ export class Version {
     }
 
     /**
-     *
+     * Sets the build version of this version object to a specified number.
      * @param buildVersion
      */
     public setBuildVersion(buildVersion: number): void{
@@ -129,7 +129,7 @@ export class Version {
     }
 
     /**
-     *
+     * Sets the revision version of this version object to a specified number.
      * @param revisionVersion
      */
     public setRevisionVersion(revisionVersion: number): void{

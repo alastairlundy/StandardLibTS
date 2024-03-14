@@ -64,7 +64,7 @@ import { KeyValuePair } from "./KeyValuePair";
 
     /**
      * Returns the Value associated with the Key.
-     * If no Value is associated with the Key undefined is returned instead.
+     * If no value is associated with the Key undefined is returned instead.
      * @param key 
      * @returns
      */
@@ -79,7 +79,7 @@ import { KeyValuePair } from "./KeyValuePair";
     }
 
     /**
-     * 
+     * Returns either the value associated with the key, or if the key is not present the specified default value is returned.
      * @param key 
      * @param defaultValue 
      * @returns 
