@@ -7,4 +7,10 @@ declare class MathHelper {
     public calculateGeometricMean(numbers: number[]): number;
     public calculateArithmeticMean(numbers: number[]): number;
 
+    public roundToInteger(number: number) : number;
+
+    public toPositiveNumber(number: number): number;
+    public toNegativeNumber(number: number): number;
+
+    public round(number: number, decimalPlaces: number): number;
 }
