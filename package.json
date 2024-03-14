@@ -2,8 +2,8 @@
   "name": "@alastairlundy/stdlibts",
   "version": "0.7.0",
   "description": "Typescript code I need for other projects that might be useful to others.",
-  "main": "dist/js/main.js",
-  "typings": "dist/js/main.d.ts",
+  "main": "dist/main.js",
+  "typings": "dist/main.d.ts",
   "scripts": {
     "test": "tsc --target esnext --outfile dist/main.js --module system"
   },
@@ -20,7 +20,6 @@
   "devDependencies": {
     "typescript": "^5.1.5"
   },
-  "files": [ "dist/js/",
-    "dist/ts/declarations/", "dist/ts/"
+  "files": [ "dist/"
 ]
 }
