@@ -1,5 +1,9 @@
 ##rm -f dist/main.d.ts
 
+rm -r dist
+
+mkdir dist
+
 mkdir dist/ts
 
 mkdir dist/js
