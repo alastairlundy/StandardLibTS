@@ -36,4 +36,35 @@ export class MathHelper{
 
         return sum / numbers.length;
     }
+    /**
+     * Turns a negative number into a positive number (e.g. It turns -100 into 100)
+     * @param number 
+     * @returns 
+     */
+    public toPositiveNumber(number: number): number{
+        if(number < 0){
+            number = number * number;
+
+            return Math.sqrt(number);
+        }
+        else{
+            return number;
+        }
+    }
+
+    /**
+     * Turns a positive number into a negative number (e.g. It turns 100 into -100)
+     * @param number 
+     * @returns 
+     */
+    public toNegativeNumber(number: number): number{
+        if(number > 0){
+            number = number * Number("-" + number.toString());
+        
+            return Math.sqrt(number);
+        }
+        else{
+            return number;
+        }
+    }
 }
