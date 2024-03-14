@@ -1,6 +1,6 @@
 {
   "name": "@alastairlundy/stdlibts",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "Typescript code I need for other projects that might be useful to others.",
   "main": "dist/js/main.js",
   "typings": "dist/js/main.d.ts",
