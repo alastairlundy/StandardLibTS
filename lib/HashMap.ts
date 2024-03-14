@@ -13,7 +13,7 @@ import { KeyValuePair } from "./KeyValuePair";
     }
 
     public [Symbol.iterator](){
-        return this.internalList;
+        return this.internalList.toArray().values;
     }
 
     /**
@@ -198,7 +198,7 @@ import { KeyValuePair } from "./KeyValuePair";
     public equals(hashMap: HashMap<K, V>): boolean{
         let equality: boolean = true;
 
-        for(let i of hashMap){
+        for(let i of hashMap.toArray()){
             if(!this.containsPair(i)){
                 equality = false;
             }

@@ -171,7 +171,7 @@ export class ArrayList<T>{
     public equals(arrayList: ArrayList<T>) : boolean{
             let equality: boolean = true;
 
-            for(let i: T of arrayList){
+            for(let i of arrayList){
                 if(!this.contains(i)){
                     equality = false;
                 }
