@@ -4,14 +4,14 @@ rm -r dist
 
 mkdir dist
 
-mkdir dist/ts
+mkdir ts
 
-mkdir dist/js
+mkdir js
 
-cp -a lib/. dist/ts
+cp -a lib/. ts
 
 tsc  --target esnext --outfile dist/main.js --module system
 
-mv dist/main.js dist/js/main.js
+mv dist/main.js js/main.js
 
-mv dist/main.d.ts dist/js/main.d.ts
+mv dist/main.d.ts js/main.d.ts
