@@ -11,7 +11,7 @@ export class MathHelper{
 
     /**
      * Calculate the geometric mean of a given array of numbers.
-     * @param numbers
+     * @param numbers The numbers to calculate a geometric mean of.
      */
     public calculateGeometricMean(numbers: number[]): number{
         let sum: number = 0;
@@ -25,7 +25,7 @@ export class MathHelper{
 
     /**
      * Calculate the arithmetic mean of a given arrays of numbers.
-     * @param numbers
+     * @param numbers The numbers to calculate an arithmetic mean of.
      */
     public calculateArithmeticMean(numbers: number[]): number{
         let sum: number = 0;
