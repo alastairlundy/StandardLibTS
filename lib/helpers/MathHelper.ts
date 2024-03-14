@@ -38,7 +38,7 @@ export class MathHelper{
     }
 
     /**
-     * Rounds 
+     * Rounds a specified number to the nearest integer.
      * @param number 
      * @returns 
      */
@@ -88,7 +88,7 @@ export class MathHelper{
 
             let decimals: string[] = number.toString().split('.');
 
-            if(decimalPlaces > 0){
+            if(decimalPlaces >= 0){
                 result = decimals[0] + ".";
 
             let decisionNumber = decimals[1].charAt(decimalPlaces);
@@ -102,9 +102,6 @@ export class MathHelper{
                 }
 
             return Number(Number(result).toFixed(decimalPlaces));
-        }
-        else if(decimalPlaces == 0){
-            return Number(Number(decimals[0]).toFixed(decimalPlaces));
         }
         else{
             decimalPlaces = this.toPositiveNumber(decimalPlaces);
